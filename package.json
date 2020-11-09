@@ -3,21 +3,33 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "protractor ./test/config/protractor_config.js",
+    "postinstall": "webdriver-manager update"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watsonik/cucumber_protractor.git"
   },
   "keywords": [
     "BDD"
   ],
   "author": "Ihar.Sakun",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/watsonik/cucumber_protractor/issues"
+  },
+  "homepage": "https://github.com/watsonik/cucumber_protractor#readme",
   "dependencies": {
-    "@cucumber/cucumber": "^7.0.0-rc.0",
     "chai": "^4.2.0",
+    "cucumber": "6.0.5",
     "protractor": "^7.0.0",
     "protractor-cucumber-framework": "^6.2.1"
   },
   "devDependencies": {
-    "eslint": "^7.12.1"
+    "eslint": "^7.13.0"
   }
 }

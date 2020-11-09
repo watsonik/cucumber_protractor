@@ -1,3 +1,4 @@
+@smoke
 Feature: Home Page Title
 
     Scenario: Page title
