@@ -7,12 +7,14 @@ Feature: Home Page Title
         Then Page title should be "EPAM | Enterprise Software Development, Design & Consulting"
         When I wait "3" seconds
 
+    @mobile
     @bash
     Scenario: Page title bash
         Given I open "https://bash.im" url
         Then Page title should be "Цитатник Рунета"
         When I wait "3" seconds
 
+    @mobile
     @medium
     Scenario: Page title medium
         Given I open "https://medium.com" url
