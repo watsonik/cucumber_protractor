@@ -18,7 +18,9 @@ exports.config = {
         ignoreUncaughtExceptions: true,
         format: ['json:./test/reports/report.json'],
         tags: '@smoke'
+    },
+    onPrepare:()=>{
+        return browser.waitForAngularEnabled(false);
     }
-
 
 };
