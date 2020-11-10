@@ -1,4 +1,7 @@
 const path = require('path');
+const yargs = require('yargs').argv;
+// const yargs = require()
+
 exports.config = {
     allScriptsTimeout: 60000,
     getPageTimeout: 60000,
@@ -17,7 +20,7 @@ exports.config = {
         require: [path.resolve('./test/step_definitions/**/*.js')],
         ignoreUncaughtExceptions: true,
         format: ['json:./test/reports/report.json'],
-        tags: '@smoke'
+        tags: yargs.tags || '@smoke'
     },
     onPrepare:()=>{
         return browser.waitForAngularEnabled(false);
