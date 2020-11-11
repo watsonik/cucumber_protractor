@@ -19,7 +19,7 @@ exports.config = {
     cucumberOpts: {
         require: [path.resolve('./test/step_definitions/**/*.js')],
         ignoreUncaughtExceptions: true,
-        format: ['json:./test/reports/report.json'],
+        format: ['json:./test/reports/report.json', './node_modules/cucumber-pretty'],
         tags: yargs.tags || '@smoke'
     },
     onPrepare:()=>{
