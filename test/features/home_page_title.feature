@@ -31,5 +31,3 @@ Feature: Home Page Title
             | URL | Title |
             | https://bash.im  | Цитатник Рунета  |
             | https://www.epam.com  | EPAM \| Enterprise Software Development, Design & Consulting  |
-
-
