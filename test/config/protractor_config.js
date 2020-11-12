@@ -1,6 +1,13 @@
 const path = require('path');
 const yargs = require('yargs').argv;
-// const yargs = require()
+const reporter = require('cucumber-html-reporter');
+
+const reportOptions={
+    theme: 'bootstrap',
+    jsonFile: path.join(__dirname, '../reports/report.json'),
+    output: path.join(__dirname, '../reports/cucumber-report.html'),
+    reportSuiteAsScenarios: true
+};
 
 exports.config = {
     allScriptsTimeout: 60000,
@@ -26,6 +33,9 @@ exports.config = {
     },
     onPrepare: () => {
         return browser.waitForAngularEnabled(false);
+    },
+    afterLaunch: () => {
+        return reporter.generate(reportOptions);
     }
 
 };
